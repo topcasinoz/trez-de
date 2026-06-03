@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="favicon.svg">
+<title>Top Rated Artists — Paint Online</title>
+<meta name="description" content="View the global art leaderboards. See who has the highest ratings and longest creative streaks in our daily drawing challenges.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+<style>
+@media (max-width: 768px) {
+  table { display: block; overflow-x: auto; white-space: nowrap; }
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="index.html" aria-label="Home"><img src="assets/img/logo.svg" alt="Paint Online icon"><span>Paint Online</span></a>
+    <div class="menu" data-nav-menu>
+      <a href="index.html">Home</a>
+      <a href="game.html">Canvas</a>
+      <a href="leaderboard.html" style='opacity:1;font-weight:800'>Top Artists</a>
+      <a href="about.html" >About</a>
+      <a href="blog.html" >Art Guide</a>
+      <a href="faq.html" >FAQ</a>
+      <a href="privacy.html" >Privacy</a>
+      <a href="terms.html" >Terms</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="right"><a class="btn ghost" data-nav-toggle>Menu</a><a class="btn" href="leaderboard.html">Top Artists</a></div>
+  </div>
+</nav>
+
+<header class="hero"><div class="container"><h1>Top Rated Artists</h1><p>See who stands at the top of the creative world. The best masterpieces from around the globe!</p></div></header>
+<section class="section container"><div class="card"><div id="lb">Loading leaderboard data...</div></div></section>
+<script>(function(){const el=document.getElementById('lb');const lb=[{name:'BrushMaster',platform:'Digital',rp:185,legend:'Artist'},{name:'CanvasKing',platform:'Sketch',rp:182,legend:'Creator'},{name:'DoodleQueen',platform:'Ink',rp:179,legend:'Illustrator'},{name:'PixelPro',platform:'Pixel',rp:175,legend:'Designer'},{name:'ColorWizard',platform:'Oil',rp:171,legend:'Painter'}];if(!lb.length){el.textContent='Could not load leaderboard data at this time.';return;}const rows=lb.slice(0,50).map((r,i)=>`<tr><td>#${i+1}</td><td>${r.name} <span class="pill">${r.platform}</span></td><td>${r.rp.toLocaleString()}</td><td>${r.legend}</td></tr>`).join('');el.innerHTML=`<table style="width:100%"><thead><tr><th>Rank</th><th>Artist</th><th>Score</th><th>Title</th></tr></thead><tbody>${rows}</tbody></table>`;})();</script>
+<footer class="footer"><div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+<div>© 2025 Argentina Travel & Food Guide. All rights reserved.</div><div style="display:flex;gap:12px;align-items:center"><span class="badge">Travel • Food • Argentina</span></div>
+</div></footer><script src="assets/js/main.js"></script></body></html>
